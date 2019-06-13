@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'hello_world',
 ]
 
 MIDDLEWARE = [
@@ -67,18 +68,16 @@ TEMPLATES = [
     },
 ]
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 # WARNING: sqlite does not support serverless, use a remote DB instead
 
 DATABASES = {
     'default': {
-        'ENGINE': '',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'zeit-django-example/db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -98,7 +97,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -111,5 +109,3 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-
